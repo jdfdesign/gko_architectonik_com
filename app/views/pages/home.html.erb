@@ -1,0 +1,20 @@
+<%# cache ['home', site, I18n.locale] do %>
+<% 
+  @portfolio ||= site.portfolio
+  @projects ||= @portfolio.projects
+  @works = (@projects + @projects).shuffle
+%>
+<% if @works %>
+<div class="projects">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="th-thumbnails js-lazyload">
+        <% @works.each do |project| %>
+          <%= render "projects/project", :project => project %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<%# end %>

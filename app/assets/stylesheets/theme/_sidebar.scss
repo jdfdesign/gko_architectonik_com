@@ -1,0 +1,52 @@
+sidebar {
+  .panel {
+    //vmargin-bottom: $line-height-computed;
+    background-color: transparent;
+    //border: 1px solid transparent;
+    //border-radius: $panel-border-radius;
+    @include box-shadow(none);
+    
+    .list-group-item {
+      margin-bottom: 0;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $panel-default-border;
+      // seems there is a bufg in sass version of bootstrap
+      &:hover,
+      &:focus {
+        background-color: #fff;
+      }
+      a {
+        color: $text-color;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: #000;
+        }
+        .badge {
+          font-weight: normal;
+          color: $text-color;
+          background-color: transparent;
+          border: 1px solid $text-color;
+          @include transition(all 0.3s ease-in-out);
+        }
+      }
+    }
+  }
+  .panel-body {
+    padding: $panel-body-padding 0;
+  }
+  .panel-footer {
+    //padding: 10px 15px;
+    background-color: transparent;
+    //border-top: 1px solid $panel-inner-border;
+  }
+  .panel-heading {
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+  .panel-default {
+    //@include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+    @include panel-variant(transparent, $panel-default-text, transparent, $panel-default-border);
+  }
+}

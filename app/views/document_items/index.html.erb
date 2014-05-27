@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-header">
+        <%= render_page_title(parent.title) %>
+      </div>
+      <%= content_tag :div, :class => "lead" do %>
+        <% raw parent.body %>
+      <% end if parent.body %>
+    </div>
+  </div> 
+</div>
+<div class="container">
+  <div class="row">
+    <%= render_collection %>
+  </div> 
+</div>

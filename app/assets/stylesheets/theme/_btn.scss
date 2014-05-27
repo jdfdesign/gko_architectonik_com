@@ -1,0 +1,11 @@
+.btn-theme {
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  &:hover,
+  &:focus {
+    border-color: $brand-primary;
+    background-color: transparent;
+    color: $brand-primary;
+  }
+}

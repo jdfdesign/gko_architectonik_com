@@ -1,0 +1,19 @@
+<article>
+  <%= render "carousel" %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="page-header text-center">
+          <%= render_page_title(resource.title) %>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center"> 
+        <%= render_copy_text(resource.body) %>
+      </div>
+    </div> 
+  </div> 
+</article>

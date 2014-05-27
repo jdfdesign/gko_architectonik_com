@@ -1,0 +1,30 @@
+<%# collection_cache(parent) do %> 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-header">
+        <%= render_page_title(parent.title) %>
+      </div>
+      <%= content_tag :div, :class => "lead" do %>
+        <% raw parent.body %>
+      <% end if parent.body %>
+    </div>
+  </div> 
+</div>
+<% 
+  @works = (@projects + @projects).shuffle
+%>
+<% if @works %>
+<div class="projects">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="th-thumbnails js-lazyload">
+        <% @works.each do |project| %>
+          <%= render "projects/project", :project => project %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<%# end %>      

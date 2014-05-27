@@ -1,0 +1,33 @@
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: url(/img/grayscale.svg);
+	filter: gray;
+}
+
+.nav-unstyled {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix();
+
+  > li {
+    position: relative;
+    display: block;
+  }
+}
+
+@mixin center-nav {
+	text-align: center;
+	margin: 0;
+	width: 100%;
+  @include clearfix();
+	> li {
+		text-align: center;
+		float: none;
+		display: inline-block;
+	}
+}

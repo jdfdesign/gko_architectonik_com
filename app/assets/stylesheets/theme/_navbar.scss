@@ -1,0 +1,51 @@
+//
+// Theme Navbar
+// --------------------------------------------------
+.navbar-brand {
+  //font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  width: 200px;
+  @include transition(all .3s ease);
+  > img {
+    @include img-responsive;
+  }
+}
+.navbar-header {
+  float: left;
+}
+.btn-menu {
+  float: right !important;
+  margin-top: 12px;
+  @media (min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+}
+#locales-menu {
+  .nav {
+    float: right !important;
+    margin-top: 12px;
+  }
+  .nav > li > a { 
+    color: #fff;
+    padding-top:    6px;
+    padding-bottom: 6px;
+    background-color: transparent;
+    @include transition(all 0.3s ease-in-out);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $brand-primary;
+    }
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    .nav {
+      margin-top: 0;
+    }
+    .nav > li > a { 
+      padding-top:    $navbar-padding-vertical;
+      padding-bottom: $navbar-padding-vertical;
+    }
+  }
+}

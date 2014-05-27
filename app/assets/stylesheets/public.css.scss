@@ -1,0 +1,228 @@
+$th-body-color: #2F3238;
+$th-body-color-alt: #26292E;
+$th-text-color: #7F8289;
+$th-primary-color: #f33d3d;
+$th-navbar-height-breakpoint: 100px;
+
+@import "theme/variables";
+$th-navbar-padding-vertical-breakpoint: (($th-navbar-height-breakpoint - $line-height-computed) / 2);
+@import "bootstrap.3.1.1/bootstrap.scss";
+@import "theme/patch";
+@import "theme/mixins";
+@import "theme/btn";
+@import "theme/form";
+@import "theme/navbar";
+@import "theme/carousel";
+@import "theme/type";
+@import "theme/thumbnails";
+@import "theme/throbber";
+@import "theme/footer";
+
+//
+// LAYOUT
+// --------------------------------------------------
+
+body, html {
+  
+}
+
+#map-canvas {
+  height: 450px;
+  width: 100%;
+  @include box-sizing(content-box);
+  margin-bottom: $line-height-computed;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+#go-up-arrow {
+  display: none;
+  position: fixed;
+  bottom: 6px;
+  right: 20px;
+  border-radius: 15px;
+  background-color: $brand-primary;
+  color: #fff;
+  @include square(30px);
+  &:hover {
+    background-color: #fff;
+    color: $brand-primary;
+  }
+}
+
+//#wrapper {
+//	margin-top: $navbar-height;
+//  @media (min-width: $grid-float-breakpoint) {
+//	  margin-top: $th-navbar-height-breakpoint;
+//  }
+//}
+
+.container {
+  max-width: 970px;
+}
+
+.section {
+  padding: $line-height-computed 0;
+  &:nth-child(even) { 
+    background-color: $th-body-color-alt;
+  }
+}
+.section-heading {
+  padding: $line-height-computed 0;
+  margin-bottom: $line-height-computed;
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+//
+// SERVICE HOME
+// --------------------------------------------------
+.carousel-fullscreen {
+
+  .carousel-indicators {
+    display: none;
+  }
+  
+  .carousel-caption {
+    background-color: #fff;
+   // background-color: rgba(243, 60, 60, .8);
+    width: auto;
+    left: 24px;
+    right: 24px;
+    text-align: left;
+    text-shadow: none;
+    padding: 16px;
+    border-left: 6px solid $th-primary-color;
+    @include transition(bottom .25s ease);
+    h3 {
+      margin: 0;
+      letter-spacing: 1px;
+     // color: #fff;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: $font-size-small;
+      font-weight: 300;
+      text-shadow: none;
+      color: $th-text-color;
+    }
+  }
+  
+  // Scale up controls for tablets and up
+  @media screen and (min-width: $screen-sm-min) {
+    .carousel-caption {
+      width: 40%;
+      left: 24px;
+      right: auto;
+      bottom: -200px;
+    }
+    .carousel-inner {
+      > .active {
+        .carousel-caption {
+          bottom: 24px;
+        }
+      }
+    }
+  }
+}
+
+
+//
+// SECTION SERVICE
+// --------------------------------------------------
+
+.service {
+  //padding: ($line-height-computed / 2) 0;
+  text-align: center;
+  i {
+    display: inline-block;
+    line-height: 90px;
+    width: 90px;
+    font-size: 35px;
+    margin: 0 0 25px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $brand-primary;
+    @include transition(all 1s ease);
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+
+//
+// SECTION TEAM
+// --------------------------------------------------
+
+
+
+//
+// SECTION CONTACT
+// --------------------------------------------------
+
+.contact-details ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+  > li {
+  	margin: 0 0 20px;
+  	line-height: 28px;
+  	padding: 0;	
+  }
+}
+
+
+#contact-form {
+  margin-bottom: 0;	
+  .form-group {
+  	margin-bottom: 1px;	
+  }
+  input,
+  textarea {
+    border: none;
+  	background: $th-body-color-alt;
+    color: #fff;
+    font-size: 16px;
+    height: auto;
+    width: 100%;
+    padding: 15px;
+  	margin: 0;
+    resize: none;
+    @include box-shadow(none);
+    @include box-sizing(border-box);
+  }
+  textarea {
+    resize: vertical;
+  }
+  .submit {
+    background: #3C3F45;
+    color: #23262C;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 40px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+  	margin-top: 30px;
+    @include transition(background 0.1s linear 0s, color 0.1s linear 0s);
+    &:hover {
+      background: $th-primary-color;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+#response {
+	margin-top: 20px;
+	color: #FFFFFF;
+}

@@ -1,0 +1,35 @@
+<%# resource_cache(resource) do %>
+<article class='project'>
+<%= render "carousel" %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-header text-center">
+        <%= page_title(resource.title) %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+		  <%= render_html_text(resource.body) %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="pager">
+        <% if resource.next %>
+          <li class="next"><a href="<%= resource.next.public_url %>" class="newer"><%= resource.next.title %>  <span class="fa fa-angle-right"></span></a></li>
+        <% end %>
+        <% if resource.previous %>
+          <li class="previous"><a href="<%= resource.previous.public_url %>" class="older"><span class="fa fa-angle-left"></span> <%= resource.previous.title %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+</article>
+<%# end %>

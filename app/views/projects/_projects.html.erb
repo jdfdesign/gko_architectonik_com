@@ -1,0 +1,13 @@
+<% if @projects %>
+<div class="projects">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="th-thumbnails th-thumbnails-full-width">
+        <% @projects.each do |project| %>
+          <%= render "projects/project", :project => project %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

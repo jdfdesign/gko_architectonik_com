@@ -1,0 +1,18 @@
+.media {
+  padding-top: $line-height-computed;
+}
+.media-object {
+  background-color: #ddd;
+  border: 3px solid #fff;
+}
+.media-body {
+  font-family: $font-family-serif;
+}
+.media-heading {
+  font-size: $font-size-small;
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+}
