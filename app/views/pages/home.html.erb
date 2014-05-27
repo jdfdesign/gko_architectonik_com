@@ -1,7 +1,7 @@
 <%# cache ['home', site, I18n.locale] do %>
 <% 
   @portfolio ||= site.portfolio
-  @projects ||= @portfolio.projects
+  @projects ||= @portfolio.projects.with_globalize
   @works = (@projects + @projects).shuffle
 %>
 <% if @works %>

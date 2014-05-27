@@ -7,9 +7,16 @@
   letter-spacing: 1px;
   font-weight: 700;
   width: 200px;
+  height: $navbar-height;
+  display: table;
+  padding-top: 0;
+  padding-bottom: 0;
   @include transition(all .3s ease);
   > img {
-    @include img-responsive;
+    height: 90%;
+    max-width: 100%;
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 .navbar-header {
@@ -17,7 +24,10 @@
 }
 .btn-menu {
   float: right !important;
-  margin-top: 12px;
+  height: $navbar-height;
+  margin-right: -10px;
+  padding-left: 20px;
+  padding-right: 20px;
   @media (min-width: $grid-float-breakpoint) {
     display: none;
   }
@@ -25,27 +35,19 @@
 #locales-menu {
   .nav {
     float: right !important;
-    margin-top: 12px;
+    margin-top: 0;
   }
   .nav > li > a { 
     color: #fff;
-    padding-top:    6px;
-    padding-bottom: 6px;
+    padding-top:    $navbar-padding-vertical;
+    padding-bottom: $navbar-padding-vertical;
     background-color: transparent;
+    height: $navbar-height;
     @include transition(all 0.3s ease-in-out);
     &:hover,
     &:focus {
       background-color: transparent;
       color: $brand-primary;
-    }
-  }
-  @media (min-width: $grid-float-breakpoint) {
-    .nav {
-      margin-top: 0;
-    }
-    .nav > li > a { 
-      padding-top:    $navbar-padding-vertical;
-      padding-bottom: $navbar-padding-vertical;
     }
   }
 }

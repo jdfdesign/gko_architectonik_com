@@ -18,6 +18,11 @@ $th-navbar-padding-vertical-breakpoint: (($th-navbar-height-breakpoint - $line-h
 @import "theme/throbber";
 @import "theme/footer";
 
+// Color for the js placeholder plugin
+.placeholder {
+  color: $input-color-placeholder;
+}
+
 //
 // LAYOUT
 // --------------------------------------------------
@@ -131,38 +136,58 @@ body, html {
     }
   }
 }
-
-
-//
-// SECTION SERVICE
-// --------------------------------------------------
-
-.service {
-  //padding: ($line-height-computed / 2) 0;
-  text-align: center;
-  i {
-    display: inline-block;
-    line-height: 90px;
-    width: 90px;
-    font-size: 35px;
-    margin: 0 0 25px 0;
-    color: #fff;
-    text-align: center;
-    border-radius: 50%;
-    background-color: $brand-primary;
-    @include transition(all 1s ease);
+.th-document_items {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix();
+  
+  .thumbnail-heading {
+    font-size: $font-size-base;
+    float: left;
   }
-  h3 {
-    margin-top: 0;
+  
+  .download {
+    position: absolute;
+    width: 100px;
+    right: -100px;
+    @include transition(right .25s ease);
+  }
+  
+  > li {
+  	float: none;
+    position: relative;
+    display: block;
+    
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+    a {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      padding: 20px 0;
+      border-bottom: 1px solid $th-primary-color;
+      line-height: $line-height-base;
+      @include transition(padding-left .25s ease);
+      @include transition(background-color .45s ease);
+      &:hover,
+      &:focus {
+        padding-left: 12px;
+        text-decoration: none;
+        color: #fff;
+        background-color: $th-primary-color;
+        .download {
+          right: 0;
+        }
+      }
+    }
+    figure {
+      color: #fff;
+      float: left;
+      margin-right: 12px;
+    }	
   }
 }
-
-//
-// SECTION TEAM
-// --------------------------------------------------
-
-
-
 //
 // SECTION CONTACT
 // --------------------------------------------------

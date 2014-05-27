@@ -237,8 +237,12 @@ jQuery(function($){
     })
 
 
-
-
+    $('.js-touchstart').on('touchstart', function(e){
+      $(this).addClass('.active');
+    }).on('touchend', function(e){
+      $(this).removeClass('.active');
+    });
+    
     ///////////////////////////////////////////////////////
     // share
     /*$('#twitter').sharrre({

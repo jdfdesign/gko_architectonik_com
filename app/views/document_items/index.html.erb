@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 text-center">
       <div class="page-header">
         <%= render_page_title(parent.title) %>
       </div>
@@ -10,8 +10,14 @@
     </div>
   </div> 
 </div>
-<div class="container">
-  <div class="row">
-    <%= render_collection %>
-  </div> 
+<% if @document_items %>
+<div class="document_items">
+  <div class="container">
+    <div class="row">
+      <ul class="th-document_items">
+        <%= render @document_items %>
+      </ul>
+    </div>
+  </div>
 </div>
+<% end %>
