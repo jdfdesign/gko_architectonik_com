@@ -32,7 +32,7 @@
     overflow: hidden;
     display: block;
     background-color: transparent;
-    padding: 15px;
+    padding: 0;
     text-align: center;
     @include opacity(1);
     @include transition(all .25s ease);
@@ -42,13 +42,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
+    height: 40px;
     margin: 0; 
-    padding: 24px;
+    padding: 0;
     color: #fff; 
     background-color: $brand-primary;
-    @include opacity(0);
-    @include transition(opacity .25s ease);
   }
   .thumbnail-heading-wrapper {
     width: 100%;
@@ -62,16 +60,30 @@
     display: table-cell;
     vertical-align: middle;
   }
-  &:hover,
-  &:focus,
-  &.active {
-    border: none;
+}
+.no-touch {
+  .thumbnail-wrap {
     .thumbnail-img {
-      @include scale(1.07,1.07);
-      @include opacity(0);
+      padding: 15px;
     }
     .caption {
-      @include opacity(1);
+      height:100%;
+      padding: 24px;
+      @include opacity(0);
+      @include transition(opacity .25s ease);
+    }
+  
+    &:hover,
+    &:focus,
+    &.active {
+      border: none;
+      .thumbnail-img {
+        @include scale(1.07,1.07);
+        @include opacity(0);
+      }
+      .caption {
+        @include opacity(1);
+      }
     }
   }
 }

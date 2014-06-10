@@ -1,21 +1,20 @@
-<form id="contact-form" role="form" action="/inquiries" method="post" data-remote="true">
+<form id="contact-form" role="form" action="/inquiries" method="post" data-remote="true" novalidate>
   <div class="col-xs-12 form-group">
-    <input type="text" name="inquiry[name]" id="name" value="" class="form-control requiredField" placeholder="Name">
+    <input type="text" name="inquiry[name]" id="inquiry_name" class="form-control" minLength="3" require placeholder="<%= t('simple_form.labels.inquiry.name') %>" >
   </div>
   <div class="col-xs-12 form-group">
-    <input type="text" name="inquiry[email]" id="email" value="" class="form-control requiredField email" placeholder="Email">
+    <input type="email" name="inquiry[email]" id="inquiry_email" class="form-control" minLength="5" require placeholder="<%= t('simple_form.labels.inquiry.email') %>">
   </div>
   <div class="col-xs-12 form-group">
-    <textarea name="inquiry[message]" id="message" rows="10" cols="30" class="form-control requiredField" placeholder="Briefing"></textarea>
+    <textarea name="inquiry[message]" id="inquiry_message" rows="10" cols="30" class="form-control" require placeholder="<%= t('simple_form.labels.inquiry.message') %>"></textarea>
   </div>
   <div class="col-xs-12 form-group">
-    <input type="hidden" name="submitted" id="submitted" class="button" value="SEND">
-    <a id="contact-submit" class="submit" type="submit" href="send.php"><%= t("gko.inquiry_submit") %></a>
+    <input type="submit" class="btn-submit" value="<%= t("gko.inquiry_submit") %>" data-disabled_with="Submitting...">
   </div>
-  <div class="col-xs-12 form-group">
-    <p id="error" data-alert="" class="alert"><%= t("gko.inquiry_error") %></p>
-    <p id="thanks" data-alert="" class="alert alert-success"><%= t("gko.inquiry_thanks") %></p>
-    <p id="timedout" data-alert="" class="alert"><%= t("gko.inquiry_connection_time_out") %></p>
-    <p id="state" data-alert="" class="alert"></p>
+  <div class="col-xs-12 form-group form-group-alert">
+    <p id="error" class="alert alert-danger"><%= t("gko.inquiry_error") %></p>
+    <p id="thanks" class="alert alert-success"><%= t("gko.inquiry_thanks") %></p>
+    <p id="timeout" class="alert alert-warning"><%= t("gko.inquiry_connection_time_out") %></p>
+    <p id="state" class="alert alert-danger"></p>
   </div>
 </form>

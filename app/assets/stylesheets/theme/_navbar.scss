@@ -2,7 +2,7 @@
 // Theme Navbar
 // --------------------------------------------------
 .navbar-brand {
-  //font-weight: 700;
+  margin-left: 6px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -18,11 +18,22 @@
     display: table-cell;
     vertical-align: middle;
   }
+  
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: $navbar-padding-horizontal;
+    }
+  }
 }
 .navbar-header {
   float: left;
 }
+.navbar-nav > li > a {
+  outline: 0;
+}
 .btn-menu {
+  outline: 0;
   float: right !important;
   height: $navbar-height;
   margin-right: -10px;
@@ -38,6 +49,7 @@
     margin-top: 0;
   }
   .nav > li > a { 
+    outline: 0;
     color: #fff;
     padding-top:    $navbar-padding-vertical;
     padding-bottom: $navbar-padding-vertical;

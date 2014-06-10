@@ -1,8 +1,19 @@
 .carousel {
   margin: 0;
-  height: 600px;
+  height: 300px;
   width: 100%;
   
+  @media (min-width: $screen-xs) {
+    height: 380px;
+  }
+  
+  @media (min-width: $screen-md) {
+    height: 550px;
+  }
+  
+  @media (min-width: $screen-lg) {
+    height: 700px;
+  }
 }
 
 // Left/right controls for nav

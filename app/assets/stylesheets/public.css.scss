@@ -206,6 +206,10 @@ body, html {
 
 #contact-form {
   margin-bottom: 0;	
+  .alert {
+    margin-top: 20px;
+  }
+  
   .form-group {
   	margin-bottom: 1px;	
   }
@@ -226,7 +230,7 @@ body, html {
   textarea {
     resize: vertical;
   }
-  .submit {
+  .btn-submit {
     background: #3C3F45;
     color: #23262C;
     cursor: pointer;
@@ -245,9 +249,5 @@ body, html {
       text-decoration: none;
     }
   }
-}
-
-#response {
-	margin-top: 20px;
-	color: #FFFFFF;
+  
 }

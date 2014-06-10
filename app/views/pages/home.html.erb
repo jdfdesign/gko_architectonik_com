@@ -2,15 +2,18 @@
 <% 
   @portfolio ||= site.portfolio
   @projects ||= @portfolio.projects.with_globalize
-  @works = (@projects + @projects).shuffle
+  #@works = (@projects + @projects).shuffle
 %>
-<% if @works %>
+<% if @projects %>
 <div class="projects">
   <div class="container-fluid">
     <div class="row">
       <div class="th-thumbnails js-lazyload">
-        <% @works.each do |project| %>
-          <%= render "projects/project", :project => project %>
+        <% @projects.each do |project| %>
+          <% if project.image_assignments.size > 1 %>
+            <%= render "projects/project", :project => project, :img => project.image_assignments.first.image %>
+            <%= render "projects/project", :project => project, :img => project.image_assignments.second.image %>
+          <% end %>
         <% end %>
       </div>
     </div>

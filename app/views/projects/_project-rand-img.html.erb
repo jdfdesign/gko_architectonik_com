@@ -1,6 +1,7 @@
+<% if project.image_assignments.any? %>
 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-  <%= link_to(project.public_url, :class => "thumbnail thumbnail-wrap") do %>
-    <% if img %>
+  <%= link_to(project.public_url, :class => "thumbnail thumbnail-wrap js-touchstart") do %>
+    <% if img = project.image_assignments.sample(1).first.image %>
       <%= content_tag(:div, :class => "thumbnail-img") do %>
         <%= image_tag(img.thumbnail("600x450#").url(), :alt => img.title, :class => "img-responsive" ) %>
       <% end %>
@@ -12,3 +13,4 @@
     </div>
   <% end %>
 </article>
+<% end %>
