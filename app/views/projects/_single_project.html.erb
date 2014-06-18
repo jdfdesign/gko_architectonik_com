@@ -24,6 +24,7 @@
         <% if resource.next %>
           <li class="next"><a href="<%= resource.next.public_url %>" class="newer"><%= resource.next.title %>  <span class="fa fa-angle-right"></span></a></li>
         <% end %>
+        <li><a href="/"><span class="fa fa-th"></span></a></li>
         <% if resource.previous %>
           <li class="previous"><a href="<%= resource.previous.public_url %>" class="older"><span class="fa fa-angle-left"></span> <%= resource.previous.title %></a></li>
         <% end %>
