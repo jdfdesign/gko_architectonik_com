@@ -34,21 +34,20 @@
 				mapTypeControlOptions: {
 					mapTypeId: [google.maps.MapTypeId.ROADMAP, 'map_style']
 				},
-				zoom: 13,
+				zoom: 17,
 				center: new google.maps.LatLng(17.896759,-62.847664),
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				scrollwheel: false
 			}
 
-			map = new google.maps.Map(document.getElementById("map"), myOptions);
+			map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 			map.mapTypes.set('map_style', styledMap);
 			map.setMapTypeId('map_style');
 
 			var point = new google.maps.LatLng(17.896759,-62.847664);
 			var marker = new google.maps.Marker({
 		        position: point,
-		        map: map,
-		        icon: 'http://site3.boxclever.ca.webguidecms.ca/public/img/map_marker_big.png'
+		        map: map
 		    });
 		}
 

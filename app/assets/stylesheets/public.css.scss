@@ -35,7 +35,7 @@ body, html {
   height: 450px;
   width: 100%;
   @include box-sizing(content-box);
-  margin-bottom: $line-height-computed;
+  margin-top: $line-height-computed;
   img {
     max-width: none;
     vertical-align: middle;

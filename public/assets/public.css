@@ -8130,7 +8130,7 @@ body {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 /* line 39, ../../app/assets/stylesheets/public.css.scss */
 #map-canvas img {
