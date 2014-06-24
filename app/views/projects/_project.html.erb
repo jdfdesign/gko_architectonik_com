@@ -1,9 +1,9 @@
-<% collection_row_cache(project) do %>
+<%# collection_row_cache(project) do %>
 <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
   <%= link_to(project.public_url, :class => "thumbnail thumbnail-wrap") do %>
     <% if img %>
       <%= content_tag(:div, :class => "thumbnail-img") do %>
-        <%= image_tag(img.thumbnail("600x450#").url(), :alt => img.title, :class => "img-responsive" ) %>
+        <%= image_tag(img.thumbnail(device_type == :desktop ? "600x450#" : "480x320#").url(), :alt => img.title, :class => "img-responsive" ) %>
       <% end %>
     <% end %>
     <div class="caption">
@@ -13,4 +13,4 @@
     </div>
   <% end %>
 </article>
-<% end %>
+<%# end %>

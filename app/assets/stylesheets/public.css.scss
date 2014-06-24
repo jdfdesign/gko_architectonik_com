@@ -85,6 +85,12 @@ body, html {
   }
 }
 
+.th-link-label {
+  display: none;
+  @media screen and (min-width: $screen-xs-max) {
+    display: inline-block;
+  }
+}
 //
 // SERVICE HOME
 // --------------------------------------------------

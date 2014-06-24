@@ -7673,7 +7673,7 @@ select {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
-  width: 200px;
+  width: 170px;
   height: 60px;
   display: table;
   padding-top: 0;
@@ -7689,55 +7689,58 @@ select {
   vertical-align: middle;
 }
 @media (min-width: 768px) {
-  /* line 24, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 4, ../../app/assets/stylesheets/theme/_navbar.scss */
+  .navbar-brand {
+    width: 200px;
+  }
+  /* line 25, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: 7px;
   }
 }
 
-/* line 29, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 30, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-header {
   float: left;
 }
 
-/* line 32, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 33, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li > a {
   outline: 0;
 }
 
-/* line 35, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 36, ../../app/assets/stylesheets/theme/_navbar.scss */
 .btn-menu {
   outline: 0;
   float: right !important;
   height: 60px;
   margin-right: -10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
-  /* line 35, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 36, ../../app/assets/stylesheets/theme/_navbar.scss */
   .btn-menu {
     display: none;
   }
 }
 
-/* line 47, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 48, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav {
   float: right !important;
   margin-top: 0;
 }
-/* line 51, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 52, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav > li > a {
   outline: 0;
   color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 8px;
   background-color: transparent;
   height: 60px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 60, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 61, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav > li > a:hover, #locales-menu .nav > li > a:focus {
   background-color: transparent;
   color: #f33d3d;
@@ -8184,11 +8187,22 @@ body {
   letter-spacing: 1px;
 }
 
-/* line 93, ../../app/assets/stylesheets/public.css.scss */
+/* line 88, ../../app/assets/stylesheets/public.css.scss */
+.th-link-label {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  /* line 88, ../../app/assets/stylesheets/public.css.scss */
+  .th-link-label {
+    display: inline-block;
+  }
+}
+
+/* line 99, ../../app/assets/stylesheets/public.css.scss */
 .carousel-fullscreen .carousel-indicators {
   display: none;
 }
-/* line 97, ../../app/assets/stylesheets/public.css.scss */
+/* line 103, ../../app/assets/stylesheets/public.css.scss */
 .carousel-fullscreen .carousel-caption {
   background-color: #fff;
   width: auto;
@@ -8201,12 +8215,12 @@ body {
   -webkit-transition: bottom 0.25s ease;
   transition: bottom 0.25s ease;
 }
-/* line 108, ../../app/assets/stylesheets/public.css.scss */
+/* line 114, ../../app/assets/stylesheets/public.css.scss */
 .carousel-fullscreen .carousel-caption h3 {
   margin: 0;
   letter-spacing: 1px;
 }
-/* line 113, ../../app/assets/stylesheets/public.css.scss */
+/* line 119, ../../app/assets/stylesheets/public.css.scss */
 .carousel-fullscreen .carousel-caption p {
   margin-bottom: 0;
   font-size: 12px;
@@ -8215,20 +8229,20 @@ body {
   color: #7f8289;
 }
 @media screen and (min-width: 768px) {
-  /* line 124, ../../app/assets/stylesheets/public.css.scss */
+  /* line 130, ../../app/assets/stylesheets/public.css.scss */
   .carousel-fullscreen .carousel-caption {
     width: 40%;
     left: 24px;
     right: auto;
     bottom: -200px;
   }
-  /* line 132, ../../app/assets/stylesheets/public.css.scss */
+  /* line 138, ../../app/assets/stylesheets/public.css.scss */
   .carousel-fullscreen .carousel-inner > .active .carousel-caption {
     bottom: 24px;
   }
 }
 
-/* line 139, ../../app/assets/stylesheets/public.css.scss */
+/* line 145, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items {
   margin-bottom: 0;
   padding-left: 0;
@@ -8243,12 +8257,12 @@ body {
 .th-document_items:after {
   clear: both;
 }
-/* line 145, ../../app/assets/stylesheets/public.css.scss */
+/* line 151, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items .thumbnail-heading {
   font-size: 14px;
   float: left;
 }
-/* line 150, ../../app/assets/stylesheets/public.css.scss */
+/* line 156, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items .download {
   position: absolute;
   width: 100px;
@@ -8256,14 +8270,14 @@ body {
   -webkit-transition: right 0.25s ease;
   transition: right 0.25s ease;
 }
-/* line 157, ../../app/assets/stylesheets/public.css.scss */
+/* line 163, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items > li {
   float: none;
   position: relative;
   display: block;
   margin-bottom: -1px;
 }
-/* line 164, ../../app/assets/stylesheets/public.css.scss */
+/* line 170, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items > li a {
   overflow: hidden;
   position: relative;
@@ -8276,50 +8290,50 @@ body {
   -webkit-transition: background-color 0.45s ease;
   transition: background-color 0.45s ease;
 }
-/* line 174, ../../app/assets/stylesheets/public.css.scss */
+/* line 180, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items > li a:hover, .th-document_items > li a:focus {
   padding-left: 12px;
   text-decoration: none;
   color: #fff;
   background-color: #f33d3d;
 }
-/* line 179, ../../app/assets/stylesheets/public.css.scss */
+/* line 185, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items > li a:hover .download, .th-document_items > li a:focus .download {
   right: 0;
 }
-/* line 184, ../../app/assets/stylesheets/public.css.scss */
+/* line 190, ../../app/assets/stylesheets/public.css.scss */
 .th-document_items > li figure {
   color: #fff;
   float: left;
   margin-right: 12px;
 }
 
-/* line 195, ../../app/assets/stylesheets/public.css.scss */
+/* line 201, ../../app/assets/stylesheets/public.css.scss */
 .contact-details ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 199, ../../app/assets/stylesheets/public.css.scss */
+/* line 205, ../../app/assets/stylesheets/public.css.scss */
 .contact-details ul > li {
   margin: 0 0 20px;
   line-height: 28px;
   padding: 0;
 }
 
-/* line 207, ../../app/assets/stylesheets/public.css.scss */
+/* line 213, ../../app/assets/stylesheets/public.css.scss */
 #contact-form {
   margin-bottom: 0;
 }
-/* line 209, ../../app/assets/stylesheets/public.css.scss */
+/* line 215, ../../app/assets/stylesheets/public.css.scss */
 #contact-form .alert {
   margin-top: 20px;
 }
-/* line 213, ../../app/assets/stylesheets/public.css.scss */
+/* line 219, ../../app/assets/stylesheets/public.css.scss */
 #contact-form .form-group {
   margin-bottom: 1px;
 }
-/* line 217, ../../app/assets/stylesheets/public.css.scss */
+/* line 223, ../../app/assets/stylesheets/public.css.scss */
 #contact-form input,
 #contact-form textarea {
   border: none;
@@ -8337,11 +8351,11 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 230, ../../app/assets/stylesheets/public.css.scss */
+/* line 236, ../../app/assets/stylesheets/public.css.scss */
 #contact-form textarea {
   resize: vertical;
 }
-/* line 233, ../../app/assets/stylesheets/public.css.scss */
+/* line 239, ../../app/assets/stylesheets/public.css.scss */
 #contact-form .btn-submit {
   background: #3C3F45;
   color: #23262C;
@@ -8357,7 +8371,7 @@ body {
   -webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;
   transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
-/* line 246, ../../app/assets/stylesheets/public.css.scss */
+/* line 252, ../../app/assets/stylesheets/public.css.scss */
 #contact-form .btn-submit:hover {
   background: #f33d3d;
   color: #fff;

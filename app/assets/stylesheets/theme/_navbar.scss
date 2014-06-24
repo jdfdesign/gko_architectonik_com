@@ -6,7 +6,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
-  width: 200px;
+  width: 170px;
   height: $navbar-height;
   display: table;
   padding-top: 0;
@@ -20,6 +20,7 @@
   }
   
   @media (min-width: $grid-float-breakpoint) {
+    width: 200px;
     .navbar > .container &,
     .navbar > .container-fluid & {
       margin-left: $navbar-padding-horizontal;
@@ -37,8 +38,8 @@
   float: right !important;
   height: $navbar-height;
   margin-right: -10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   @media (min-width: $grid-float-breakpoint) {
     display: none;
   }
@@ -51,10 +52,10 @@
   .nav > li > a { 
     outline: 0;
     color: #fff;
-    padding-top:    $navbar-padding-vertical;
-    padding-bottom: $navbar-padding-vertical;
+    padding: $navbar-padding-vertical 8px;
     background-color: transparent;
     height: $navbar-height;
+    
     @include transition(all 0.3s ease-in-out);
     &:hover,
     &:focus {

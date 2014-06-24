@@ -1,8 +1,9 @@
 <% if resource.images.any? %>
 <% 
-image_geometry = local_assigns.has_key?(:image_style) ? image_style : site.preferred_image_carousel_size
-rand_id = "carousel_#{rand(10000)}"
+  geometry = device_type == :desktop ? "980x654#" : "480x320#"
+  rand_id = "carousel_#{rand(10000)}"
 %>
+
 <div class="carousel slide" id="<%= rand_id %>">
   <!-- Carousel indicator --> 
   <ol class="carousel-indicators">
@@ -13,7 +14,7 @@ rand_id = "carousel_#{rand(10000)}"
   <div class="carousel-inner">
   <% resource.images.each_with_index do |img, index| %>
     <div class="item <%= 'active' if index == 0 %>">
-      <%= image_fu(img, image_geometry, :rel => "external") %>
+      <%= image_fu(img, geometry, :rel => "external") %>
     </div>
   <% end %>
   </div>
